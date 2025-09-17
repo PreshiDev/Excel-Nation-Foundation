@@ -14,6 +14,37 @@
     <meta property="og:url" content="https://excelnation.org/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" />
     <link rel="icon" href="./images/WhatsApp Image 2025-09-11 at 8.37.27 AM.jpeg" />
+    <!-- Social Profile / Instagram -->
+    <meta property="og:site_name" content="Excel Nation Foundation" />
+    <meta property="og:see_also" content="https://www.instagram.com/excelnation8/" />
+
+    <!-- Twitter Card (optional but good for previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Excel Nation Foundation — Mental Health Awareness">
+    <meta name="twitter:description" content="Excel Nation Foundation: promoting mental health awareness, advocacy and community support across Nigeria.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- JSON-LD Structured Data for NGO + Instagram -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Excel Nation Foundation",
+      "url": "https://excelnation.org/",
+      "logo": "https://excelnation.org/images/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/excelnation8/"
+      ],
+      "description": "Excel Nation Foundation: promoting mental health awareness, advocacy and community support across Nigeria.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "excelnation.fdn@gmail.com",
+        "telephone": "+234-810-4440-355"
+      }
+    }
+    </script>
+    
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -44,12 +75,12 @@
         </nav>
 
         <div class="flex items-center gap-3">
-            <a href="https://wa.me/2348104440355?text=Hello%20Excel%20Nation%20Foundation!%20I%20would%20like%20to%20donate." 
+            <a href="javascript:void(0)" onclick="openDonateModal()" 
                 class="hidden sm:inline-block bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700">
                 Donate
             </a>
 
-            <a href="https://wa.me/2348104440355?text=Hello%20Excel%20Nation%20Foundation!%20I%20want%20to%20join%20as%20a%20volunteer." 
+            <a href="https://wa.me/2348076444680?text=Hello%20Excel%20Nation%20Foundation!%20I%20want%20to%20join%20as%20a%20volunteer." 
                 class="hidden sm:inline-block border border-indigo-600 text-indigo-600 px-4 py-2 rounded-md text-sm hover:bg-indigo-50">
                 Join
             </a>
@@ -75,12 +106,12 @@
         <a href="#testimonials" class="block">Testimonials</a>
         <a href="#get-involved" class="block">Get Involved</a>
         <div class="flex gap-2 pt-2">
-            <a href="https://wa.me/2348104440355?text=Hello%20Excel%20Nation%20Foundation!%20I%20would%20like%20to%20donate." 
+            <a href="javascript:void(0)" onclick="openDonateModal()" 
                 class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700">
                 Donate
             </a>
 
-            <a href="https://wa.me/2348104440355?text=Hello%20Excel%20Nation%20Foundation!%20I%20want%20to%20join%20as%20a%20volunteer." 
+            <a href="https://wa.me/2348076444680?text=Hello%20Excel%20Nation%20Foundation!%20I%20want%20to%20join%20as%20a%20volunteer." 
                 class="border border-indigo-600 text-indigo-600 px-4 py-2 rounded-md text-sm hover:bg-indigo-50">
                 Join
             </a>
@@ -102,12 +133,12 @@
           <p class="mt-6 text-lg opacity-90">Excel Nation Foundation promotes mental health awareness, advocacy, and community support across Nigeria — empowering people with knowledge, care, and hope.</p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="https://wa.me/2348104440355?text=I%20want%20to%20join%20the%20movement." 
+            <a href="https://wa.me/2348076444680?text=I%20want%20to%20join%20the%20movement." 
                 class="inline-block bg-white text-indigo-600 px-5 py-3 rounded-md font-medium shadow hover:shadow-md">
                 Join the Movement
             </a>
 
-            <a href="https://wa.me/2348104440355?text=I%20would%20like%20to%20donate%20to%20support%20your%20work." 
+            <a href="javascript:void(0)" onclick="openDonateModal()" 
                 class="inline-block border border-white text-white px-5 py-3 rounded-md font-medium hover:bg-white/10">
                 Support Our Work
             </a>
@@ -266,10 +297,10 @@
           </ul>
 
           <div class="mt-6 flex gap-3">
-            <a href="https://wa.me/2348104440355?text=I%20want%20to%20volunteer%20with%20Excel%20Nation%20Foundation." 
+            <a href="https://wa.me/2348076444680?text=I%20want%20to%20volunteer%20with%20Excel%20Nation%20Foundation." 
             class="bg-indigo-600 text-white px-5 py-3 rounded-md">Join as Volunteer</a>
 
-            <a href="https://wa.me/2348104440355?text=I%20want%20to%20donate%20to%20Excel%20Nation%20Foundation." 
+            <a href="javascript:void(0)" onclick="openDonateModal()" 
             class="border border-indigo-600 text-indigo-600 px-5 py-3 rounded-md">Donate</a>
           </div>
         </div>
@@ -299,6 +330,35 @@
       </div>
     </section>
 
+    <!-- DONATE MODAL -->
+    <div id="donateModal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <!-- Close button -->
+        <button onclick="closeDonateModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+          ✕
+        </button>
+
+        <h3 class="text-xl font-semibold text-center mb-4">Support Excel Nation Foundation</h3>
+        <p class="text-gray-600 text-center mb-6">Choose how you’d like to donate:</p>
+
+        <div class="space-y-4">
+          <!-- Chat Option -->
+          <a href="https://wa.me/2348076444680?text=Hello%20Excel%20Nation%20Foundation!%20I%20would%20like%20to%20donate." 
+            class="block bg-green-600 text-white text-center py-3 rounded-md hover:bg-green-700">
+            💬 Chat with NGO on WhatsApp
+          </a>
+
+          <!-- Bank Details Option -->
+          <div class="bg-gray-50 border rounded-md p-4 text-center">
+            <p class="font-semibold text-gray-800">Bank Transfer</p>
+            <p class="text-sm text-gray-600 mt-2">Account Number: <strong>1227069476</strong></p>
+            <p class="text-sm text-gray-600">Account Name: <strong>Excel Nation Foundation</strong></p>
+            <p class="text-sm text-gray-600">Bank: <strong>Zenith Bank</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FOOTER / CONTACT -->
     <footer class="bg-white border-t">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
@@ -317,9 +377,9 @@
           <h5 class="font-semibold">Stay Connected</h5>
           <p class="text-sm text-gray-600 mt-2">Follow us on social media for updates and campaigns.</p>
           <div class="mt-3 flex gap-3">
-            <a href="#" aria-label="twitter" class="text-gray-500 hover:text-indigo-600">Twitter</a>
-            <a href="#" aria-label="facebook" class="text-gray-500 hover:text-indigo-600">Facebook</a>
-            <a href="#" aria-label="instagram" class="text-gray-500 hover:text-indigo-600">Instagram</a>
+            <!-- <a href="#" aria-label="twitter" class="text-gray-500 hover:text-indigo-600">Twitter</a>
+            <a href="#" aria-label="facebook" class="text-gray-500 hover:text-indigo-600">Facebook</a> -->
+            <a href="https://www.instagram.com/excelnation8/" aria-label="instagram" class="text-gray-500 hover:text-indigo-600">Instagram</a>
           </div>
         </div>
       </div>
@@ -436,5 +496,16 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Open modal
+  function openDonateModal() {
+    document.getElementById('donateModal').classList.remove('hidden');
+  }
+
+  // Close modal
+  function closeDonateModal() {
+    document.getElementById('donateModal').classList.add('hidden');
+  }
+</script>
 </body>
 </html>
